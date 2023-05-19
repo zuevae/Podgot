@@ -46,5 +46,15 @@ namespace Podgot
             object j = Gaz.SelectedItem;
             //frame1.Navigate(new update(frame1, j)); //при нажтии переход на другую страницу(update)
         }
+
+        private void ComboType_SelectionChangedAsync(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void ComboType_Copy_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
     }
 }
