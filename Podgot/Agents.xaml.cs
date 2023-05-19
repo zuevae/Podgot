@@ -27,6 +27,24 @@ namespace Podgot
             InitializeComponent();
             frame1 = frame;
             агент = Entities.GetContext().Агент.ToList();
+            Gaz.ItemsSource = агент;
+        }
+        private void Poisk_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            Update();
+        }
+
+        public void Update()
+        {
+            var poisk = Entities.GetContext().Агент.ToList();
+            poisk = poisk.Where(p => p.Наименование_агента.ToLower().Contains(Poisk.Text.ToLower())).ToList();
+            Gaz.ItemsSource = poisk;
+        }
+        private async void Gaz_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            await Task.Delay(100);
+            object j = Gaz.SelectedItem;
+            frame1.Navigate(new update(frame1, j)); //при нажтии переход на другую страницу(update)
         }
     }
 }
