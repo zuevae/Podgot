@@ -18,10 +18,11 @@
                  x:Name="Poisk" 
                  TextChanged="Poisk_TextChanged" 
                  Height="27" 
-                 FontSize="16"/>
+                 FontSize="14"/>
         <ListView d:InputScope="{Binding Агент}"
                   Margin="0,70,0,0"
-                  x:Name="Gaz">
+                  x:Name="Gaz" 
+                  FontSize="14">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid MouseLeftButtonDown="Gaz_MouseLeftButtonDown">
@@ -42,6 +43,10 @@
                             <Run Text="Приоритетность: "/>
                             <Run Text="{Binding Приоритет}"/>
                         </TextBlock>
+                        <Image Source="{Binding Логотип_агента}"
+                               Width="200"
+                               Height="200">
+                        </Image>
                     </Grid>
                 </DataTemplate>
             </ListView.ItemTemplate>

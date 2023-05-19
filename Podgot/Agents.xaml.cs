@@ -44,7 +44,7 @@ namespace Podgot
         {
             await Task.Delay(100);
             object j = Gaz.SelectedItem;
-            frame1.Navigate(new update(frame1, j)); //при нажтии переход на другую страницу(update)
+            //frame1.Navigate(new update(frame1, j)); //при нажтии переход на другую страницу(update)
         }
     }
 }
