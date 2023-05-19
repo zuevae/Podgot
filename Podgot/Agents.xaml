@@ -10,19 +10,54 @@
       Title="Agents">
 
     <Grid>
+        <TextBlock Text="Поиск: "
+                   Foreground="#46B29D"
+                   FontFamily="Monotype Corsiva"
+                   TextAlignment="Right" 
+                   FontSize="16" 
+                   Margin="5,23,746,393"/>
         <TextBox HorizontalAlignment="Left" 
-                 Margin="49,20,0,0" 
+                 Margin="54,20,0,0" 
                  TextWrapping="Wrap" 
                  VerticalAlignment="Top" 
-                 Width="131" 
+                 Width="133" 
                  x:Name="Poisk" 
                  TextChanged="Poisk_TextChanged" 
                  Height="27" 
-                 FontSize="14"/>
+                 FontSize="14"
+                 FontFamily="Monotype Corsiva"/>
+        <TextBlock Text="Сортировка: "
+                   Foreground="#46B29D"
+                   FontFamily="Monotype Corsiva"
+                   TextAlignment="Right" 
+                   FontSize="16" 
+                   Margin="199,23,522,393"/>
+        <ComboBox
+                  x:Name="ComboType"
+                  DisplayMemberPath="service1"
+                  FontFamily="Monotype Corsiva" 
+                  SelectionChanged="ComboType_SelectionChangedAsync" 
+                  Margin="279,20,346,403"
+                          />
+        <TextBlock Text="Фильтрация: "
+                   Foreground="#46B29D"
+                   Width="87"
+                   FontFamily="Monotype Corsiva"
+                   TextAlignment="Right" 
+                   FontSize="16" 
+                   HorizontalAlignment="Left" 
+                   VerticalAlignment="Top" 
+                   Height="30" 
+                   Margin="476,25,0,0"/>
+        <ComboBox
+                  x:Name="ComboType_Copy"
+                  SelectionChanged="ComboType_Copy_SelectionChanged" 
+                  Margin="568,20,24,403"/>
         <ListView d:InputScope="{Binding Агент}"
                   Margin="0,70,0,0"
                   x:Name="Gaz" 
-                  FontSize="14">
+                  FontSize="14"
+                  FontFamily="Monotype Corsiva">
             <ListView.ItemTemplate>
                 <DataTemplate>
                     <Grid MouseLeftButtonDown="Gaz_MouseLeftButtonDown">
@@ -64,54 +99,54 @@
                            Text="&lt;&lt;" 
                            Foreground="Black"></TextBlock>
                 <TextBlock Name="txtPrev2" 
-                           FontFamily="Comic Sans MS" 
+                           FontFamily="Monotype Corsiva" 
                            FontSize="30" 
                            Uid="prev" 
                            Text=" &lt;" 
                            Foreground="Black"/>
                 <TextBlock Name="txt12" 
-                           FontFamily="Comic Sans MS"
+                           FontFamily="Monotype Corsiva"
                            FontSize="30" 
                            Uid="1" 
                            Text="{Binding  Path = NPage[0]}" 
                            Visibility="{Binding Visible[0]}" 
                            FontWeight="{Binding Bold[0]}"/>
                 <TextBlock Name="txt22" 
-                           FontFamily="Comic Sans MS" 
+                           FontFamily="Monotype Corsiva" 
                            FontSize="30" 
                            Uid="2" 
                            Text="{Binding  Path = NPage[1]}" 
                            Visibility="{Binding Visible[1]}" 
                            FontWeight="{Binding Bold[1]}"/>
                 <TextBlock Name="txt32" 
-                           FontFamily="Comic Sans MS" 
+                           FontFamily="Monotype Corsiva" 
                            FontSize="30" 
                            Uid="3" 
                            Text="{Binding  Path = NPage[2]}" 
                            Visibility="{Binding Visible[2]}" 
                            FontWeight="{Binding Bold[2]}"/>
                 <TextBlock Name="txt42" 
-                           FontFamily="Comic Sans MS" 
+                           FontFamily="Monotype Corsiva" 
                            FontSize="30" 
                            Uid="4" 
                            Text="{Binding  Path = NPage[3]}" 
                            Visibility="{Binding Visible[3]}" 
                            FontWeight="{Binding Bold[3]}"/>
                 <TextBlock Name="txt52" 
-                           FontFamily="Comic Sans MS" 
+                           FontFamily="Monotype Corsiva" 
                            FontSize="30" 
                            Uid="5" 
                            Text="{Binding  Path = NPage[4]}" 
                            Visibility="{Binding Visible[4]}" 
                            FontWeight="{Binding Bold[4]}"/>
                 <TextBlock Name="txtNext2" 
-                           FontFamily="Comic Sans MS" 
+                           FontFamily="Monotype Corsiva" 
                            FontSize="30" 
                            Uid="next" 
                            Text=" &gt;" 
                            Foreground="Black"/>
                 <TextBlock Name="txtNext12" 
-                           FontFamily="Comic Sans MS" 
+                           FontFamily="Monotype Corsiva" 
                            FontSize="30" 
                            Uid="next1" 
                            Text=" &gt;&gt;" 
