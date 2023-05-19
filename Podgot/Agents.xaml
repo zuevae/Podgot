@@ -32,8 +32,7 @@
                    TextAlignment="Right" 
                    FontSize="16" 
                    Margin="199,23,522,393"/>
-        <ComboBox
-                  x:Name="ComboType"
+        <ComboBox x:Name="ComboType"
                   DisplayMemberPath="service1"
                   FontFamily="Monotype Corsiva" 
                   SelectionChanged="ComboType_SelectionChangedAsync" 
@@ -49,10 +48,9 @@
                    VerticalAlignment="Top" 
                    Height="30" 
                    Margin="476,25,0,0"/>
-        <ComboBox
-                  x:Name="ComboType_Copy"
+        <ComboBox x:Name="ComboType_Copy"
                   SelectionChanged="ComboType_Copy_SelectionChanged" 
-                  Margin="568,20,24,403"/>
+                  Margin="563,20,60,403"/>
         <ListView d:InputScope="{Binding Агент}"
                   Margin="0,70,0,0"
                   x:Name="Gaz" 
@@ -97,13 +95,13 @@
                            FontSize="30" 
                            Uid="prev1" 
                            Text="&lt;&lt;" 
-                           Foreground="Black"></TextBlock>
+                           Foreground="#46B29D"></TextBlock>
                 <TextBlock Name="txtPrev2" 
                            FontFamily="Monotype Corsiva" 
                            FontSize="30" 
                            Uid="prev" 
                            Text=" &lt;" 
-                           Foreground="Black"/>
+                           Foreground="#46B29D"/>
                 <TextBlock Name="txt12" 
                            FontFamily="Monotype Corsiva"
                            FontSize="30" 
@@ -144,13 +142,13 @@
                            FontSize="30" 
                            Uid="next" 
                            Text=" &gt;" 
-                           Foreground="Black"/>
+                           Foreground="#46B29D"/>
                 <TextBlock Name="txtNext12" 
                            FontFamily="Monotype Corsiva" 
                            FontSize="30" 
                            Uid="next1" 
                            Text=" &gt;&gt;" 
-                           Foreground="Black"/>
+                           Foreground="#46B29D"/>
             </StackPanel>
         </Grid>
     </Grid>
